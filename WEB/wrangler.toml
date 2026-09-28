@@ -1,0 +1,14 @@
+name = "enco"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+# Binding ke Cloudflare D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "enco_db"
+database_id = "4779c0ed-cd82-4d4a-8d9f-2266adbb0202"
+
+# Deployment assets (hosting web portal pendaftaran & control panel)
+[assets]
+directory = "./public"
+binding = "ASSETS"
