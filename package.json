@@ -1,0 +1,13 @@
+{
+  "name": "enco",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ENCO Mobile Web Portal & Auth API for Cloudflare Workers",
+  "main": "worker.js",
+  "scripts": {
+    "build": "echo 'No build needed'"
+  },
+  "devDependencies": {
+    "wrangler": "^3.109.0"
+  }
+}

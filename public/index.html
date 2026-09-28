@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Web ENCO Mobile - Sistem Otomasi CKG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070b14;
+      --bg-card: rgba(13, 20, 36, 0.85);
+      --border-cyan: rgba(0, 240, 255, 0.35);
+      --cyan: #00f0ff;
+      --cyan-glow: rgba(0, 240, 255, 0.45);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-cyber: 'Rajdhani', sans-serif;
+      --font-main: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(37, 99, 235, 0.12) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+      color: var(--text);
+      font-family: var(--font-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .logo-box {
+      width: 76px;
+      height: 76px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1.5px solid var(--border-cyan);
+      border-radius: 20px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 28px var(--cyan-glow);
+    }
+
+    .title {
+      font-family: var(--font-cyber);
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 20%, var(--cyan) 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 500px) {
+      .nav-grid { grid-template-columns: 1fr; }
+    }
+
+    .nav-card {
+      background: var(--bg-card);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-card:hover {
+      border-color: var(--cyan);
+      background: rgba(18, 30, 56, 0.95);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0, 240, 255, 0.25);
+    }
+
+    .nav-icon {
+      font-size: 32px;
+    }
+
+    .nav-title {
+      font-family: var(--font-cyber);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-box">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <h1 class="title">ENCO Mobile</h1>
+    <p class="subtitle">Portal Web Pendaftaran &amp; Control Panel Manajemen Akun</p>
+
+    <div class="nav-grid">
+      <!-- Card Pendaftaran -->
+      <a href="register.html" class="nav-card">
+        <div class="nav-icon">📝</div>
+        <div class="nav-title">Pendaftaran Nakes</div>
+        <div class="nav-desc">Pendaftaran akun baru Tenaga Kesehatan dengan paket Trial 3 Hari atau paket Pro.</div>
+      </a>
+
+      <!-- Card Control Panel -->
+      <a href="admin.html" class="nav-card">
+        <div class="nav-icon">🛡️</div>
+        <div class="nav-title">Control Panel Admin</div>
+        <div class="nav-desc">Dashboard Super Admin untuk mengelola, mengaktifkan, dan perpanjang masa aktif akun.</div>
+      </a>
+    </div>
+
+    <footer class="footer">
+      Version: 1.0.0 &bull; Create by: Mochamad Fauzie, S.Gz
+    </footer>
+  </div>
+</body>
+</html>
